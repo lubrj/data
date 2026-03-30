@@ -3,13 +3,13 @@ local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
 
 print("cooldown script")
-global cooldownscript = true
+getgenv().cooldownscript = true
 
 RunService.Heartbeat:Connect(function()
     local character = localPlayer.Character
     if not character then return end
 
-    for _, tool in pairs(character:GetChildren()) do
+    for _, tool in ipairs(character:GetChildren()) do
         if tool:IsA("Tool") and tool.Name == "Sniper" and tool:GetAttribute("Scope") ~= nil then
             tool:SetAttribute("Scope", false)
             tool:SetAttribute("ShootDelay", 0.5)
