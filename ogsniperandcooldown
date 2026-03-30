@@ -10,7 +10,7 @@ RunService.Heartbeat:Connect(function()
     if not character then return end
 
     for _, tool in pairs(character:GetChildren()) do
-        if tool:IsA("Tool") and tool:GetAttribute("Scope") ~= nil then
+        if tool:IsA("Tool") and tool.Name == "Sniper" and tool:GetAttribute("Scope") ~= nil then
             tool:SetAttribute("Scope", false)
             tool:SetAttribute("ShootDelay", 0.5)
         end
