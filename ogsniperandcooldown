@@ -2,7 +2,6 @@ local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
 
-print("cooldown script")
 getgenv().cooldownscript = true
 
 RunService.Heartbeat:Connect(function()
