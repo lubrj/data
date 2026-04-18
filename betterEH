@@ -1,0 +1,5 @@
+game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "NEW VERSION",
+        Text = "DISCORD: discord.gg/tBtUU6VssM",
+        Duration = 50
+    })
